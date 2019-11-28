@@ -1,2 +1,0 @@
-# Redirect default github subdomain to primary domain
-https://mattjogo.github.io/* https://mattjo.net/:splat 301!

@@ -22,12 +22,13 @@ a { color: #fff; text-decoration: none;}
 	____________________________
 */
 
-#wrapper { margin: 0 auto;}
-#main { position:absolute;
-
-		margin: 2em; 
-
-		width: 27em; height: 1em;
-		left: 50%; transform: translateX(-60%);
-		top: 40%;
+#wrapper { width: 100%;
+	text-align: center;
+	}
+#main { position: absolute; /* */
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 48%;
+	height: 59%;
 	}

@@ -10,14 +10,11 @@
 	____________________________
 */
 
-
-body { background: rgba(7, 7, 7, 0.8); margin: 0; padding: 0; }
-a { color: #fff; text-decoration: none;}
-
 html, body, pre, code, kbd, samp {
 	font-family: 'Press Start 2P';
 }
 
+a { color: #fff; text-decoration: none;}
 
 /*
 	----------------------------
@@ -25,7 +22,13 @@ html, body, pre, code, kbd, samp {
 	____________________________
 */
 
-
 #wrapper { margin: 0 auto;}
-#main { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-#nav { width: 27em; height: 1em; }
+#main { position:absolute;
+
+		background: #fff;
+		margin: 0 auto; 
+		
+		width: 27em; height: 1em;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+	}

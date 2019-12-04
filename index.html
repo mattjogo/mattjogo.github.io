@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>(｡•̀ᴗ-)✧</title>
     <meta name="description" content="mattjo.net">
@@ -12,22 +12,48 @@
       
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
-    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-    <style>
-      #navigator {
-        width: 27em;
-        height: 1em;
-        margin: 2em;
-      }
-    </style>
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/jquery.mb.YTPlayer.js"></script>
+
+    <script type="text/javascript">
+      window.onload=function(){
+        $(function () {
+          $(".player").mb_YTPlayer();
+          console.log('initialized');
+        });
+      }
+    </script>
+
+    <style>
+      #container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+
+      #navigator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        margin-top:-130px;
+        margin-left: -200px;
+      }
+
+      @media ( max-width: 768px ) {
+        #navigator {
+          width: 80%;
+          height: 80%;
+          margin: 20%;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/e6y5JpPG0Ug',
+    <div class="player" data-property="{videoURL:'http://youtu.be/e6y5JpPG0Ug',
     containment:'body',
     useOnMobile: false,
     showControls: false,
@@ -37,16 +63,18 @@
     showYTLogo: false,
     opacity: 1}"></div>
 
-    <div id="navigator">
-      <section class="message-list">
-        <section class="message -left">
-          <div class="nes-balloon from-left" style="text-align: left;">
-            <p><button type="button" class="nes-btn is-disabled">mattjo</button></p>
-            <p><a class="nes-btn is-warning" href="/dev">dev</a>&nbsp;<a class="nes-btn is-primary" href="/blog">blog</a></p>
-            <p><a class="nes-btn" href="https://github.com/mattjogo">github</a>&nbsp;<a class="nes-btn is-success" href="https://instagram.com/chosenneocitykid">instagram</a></p>
-          </div>
+    <div id="container">
+      <div id="navigator">
+        <section class="message-list">
+          <section class="message -left">
+            <div class="nes-balloon from-left" style="text-align: left;">
+              <p><a class="nes-btn is-disabled" href="/blog/about">mattjo</a></p>
+              <p><a class="nes-btn is-warning" href="/dev/">dev</a>&nbsp;<a class="nes-btn is-primary" href="/blog/">blog</a></p>
+              <p><a class="nes-btn" href="https://github.com/mattjogo">github</a>&nbsp;<a class="nes-btn is-success" href="/blog/lnk">and else</a></p>
+            </div>
+          </section>
         </section>
-      </section>
+      </div>
     </div>
   </body>
 </html>

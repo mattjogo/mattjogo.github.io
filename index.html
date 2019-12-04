@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>(｡•̀ᴗ-)✧</title>
     <meta name="description" content="mattjo.net">
-
     <meta itemprop="name" content="(｡•̀ᴗ-)✧">
     <meta itemprop="description" content="mattjo.net">
     <meta itemprop="image" content="images/index.png">
-    
+      
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/screen.css">
-
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <style>
+      #navigator {
+        width: 27em;
+        height: 1em;
+        margin: 2em;
+      }
+    </style>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-	<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+  </head>
 
-    <script type="text/javascript">
-        var isMobile = function() {
-           //console.log("Navigator: " + navigator.userAgent);
-           return /(iphone|ipod|ipad|android|blackberry|windows ce|palm|symbian)/i.test(navigator.userAgent);
-         };
-        if(isMobile()) {
-               window.location.href = "/m/";
-        }
-        </script>
+  <body>
+    <div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/e6y5JpPG0Ug',
+    containment:'body',
+    useOnMobile: false,
+    showControls: false,
+    autoPlay: true,
+    mute: false,
+    startAt: 39,
+    showYTLogo: false,
+    opacity: 1}"></div>
 
-</head>
-<body>
-<div id="wrapper" class="clearfix">
-    <div id="main">
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-            <section class="message-list">
-                    <section class="message -left">
-                      <!-- Balloon -->
-                      <div class="nes-balloon from-left" style="text-align: left;">
-                        <p><button type="button" class="nes-btn is-disabled">mattjo</button></p>
-                        <p><a class="nes-btn is-warning" href="/dev">dev</a>&nbsp;<a class="nes-btn is-primary" href="/blog">blog</a></p>
-                        <p><a class="nes-btn" href="https://github.com/mattjogo">github</a>&nbsp;<a class="nes-btn is-success" href="https://instagram.com/chosenneocitykid">instagram</a></p>
-                      </div>
-                    </section>
-                  </section>
+    <div id="navigator">
+      <section class="message-list">
+        <section class="message -left">
+          <div class="nes-balloon from-left" style="text-align: left;">
+            <p><button type="button" class="nes-btn is-disabled">mattjo</button></p>
+            <p><a class="nes-btn is-warning" href="/dev">dev</a>&nbsp;<a class="nes-btn is-primary" href="/blog">blog</a></p>
+            <p><a class="nes-btn" href="https://github.com/mattjogo">github</a>&nbsp;<a class="nes-btn is-success" href="https://instagram.com/chosenneocitykid">instagram</a></p>
+          </div>
+        </section>
+      </section>
     </div>
-</div>
-</body>
+  </body>
 </html>
